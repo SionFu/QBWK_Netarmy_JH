@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## This is developer code file
 
 You can use the [editor on GitHub](https://github.com/SionFu/QBWK_Netarmy_JH/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
