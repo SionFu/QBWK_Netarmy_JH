@@ -1,37 +1,80 @@
-## This is developer code file
+# 网军开发文档
 
-You can use the [editor on GitHub](https://github.com/SionFu/QBWK_Netarmy_JH/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+>网军项目 OC 为主要语言
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 需求
 
-### Markdown
+1. 手机和设备好UUID绑定，同一台设备和同一个UUID只能绑定一个账号
+2. APP 启动的时候检[Auth](#Auth)测账号是否与该设备绑定
+3. 未绑定进入注册页面[QBWKAuthViewController](#QBWKAuthViewController)
+4. 已经注册账号进入登录页面[login][#login]使用faceID 或者touchID进入系统
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+**文档目录**
 
-# Header 1
-## Header 2
-### Header 3
+- [Classes](#Classes)
+ -  [AppDelegate](#AppDelegate)
+ -  [Main](#Main)
+ -  [Task(任务)](#Task)
+ 		-  [TaskReport(报表)](#TaskReport(报表))
+ 		-  [TaskReport](#TaskReport)
+ 		-  [ViewModel](#ViewModel)
+ 		-  [Model](#Model)
+ 		-  [View](#view)
+ 			-  [TaskGroupView](#TaskGroupView)
+ 			-  [TaskAssign](#TaskAssign)
+ 			-  [TaskView](#TaskAssign)
+ 			-  [AssignedTaskView](#TaskAssign)
+ 			-  TaskGroupDetailTableViewController.h
+ 			-  TaskGroupDetailTableViewController.m
+ 			-  TaskGroupDetai.storyboard(任务详情)
+ 		-	TaskAssing.storyboard
+ 		-  TaskAssignTableViewController.h
+ 		-  TaskAssignTableViewController.m
+ 		-  TasklistCell.h
+ 		-  TaskListCell.m
+ 		-  TaskList.storyboard
+ -  [Authlogin](#Authlogin)
+ -  [Other](#Other)
+	 -  [审核部分#添加用于审核的**设置**和**个人中心**](#审核部分)
+	 -  ShareSDK
+	 -  ZFChart
+	 -  DAcircularProgress
+	 -  Tool
+	 -  ZLPhoto
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+Classes
+===
 
-**Bold** and _Italic_ and `Code` text
+AppleDelegate
+===
 
-[Link](url) and ![Image](src)
+Main
+===
+
+Task
+===
+
+View
+===
+主页面下的视图,有任务的详细信息包括,查看和转发详细信息[TaskDeatilTableViewController](#TaskDeatilTableViewController.m),下方有各个部门的详细信息
+		-  TaskGroupDetailTableViewController.h
+ 			-  TaskGroupDetailTableViewController.m
+ 			-  TaskGroupDetai.storyboard(任务详情)
+ 	
+
+## TaskReport(报表)
+===
+
+- TaskReport.h
+
+	选择人员上传所需要的模型
+	
+```
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+- TaskReport.h
+- AllSelectBtn.h
+	
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SionFu/QBWK_Netarmy_JH/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
